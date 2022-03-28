@@ -1,6 +1,6 @@
 # Social Network API
 
-An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app will use Express, Node, MongoDB and Mongoose to allow the user to be able to express thoughts use friend lists and thought reactions to be created also updated and deleted. 
+An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app will use Express, Node, MongoDB and Mongoose that will allow the user to be able to express thoughts use friend lists and thought reactions to be created also updated and deleted. 
 
 ## User Story
 As a social media startup, I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data
