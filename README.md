@@ -1,6 +1,6 @@
-# Social Network API
+# New Social Network 
 
-An API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app will use Express, Node, MongoDB and Mongoose that will allow the user to be able to express thoughts use friend lists and thought reactions to be created also updated and deleted. 
+An API for a new social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app will use Express, Node, MongoDB and Mongoose that will allow the user to be able to express thoughts use friend lists and thought reactions to be created also updated and deleted. 
 
 ## User Story
 As a social media startup, I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data
@@ -8,7 +8,12 @@ As a social media startup, I want an API for my social network that uses a NoSQL
 ## Walk through Video
 
 
-The walk through demonstrates the GET, POST, PUT, and DELETE methods for users and thoughts, as well as the POST and DELETE methods for thought reactions and friend lists.
+
+
+https://user-images.githubusercontent.com/46231696/162612804-a2221bc5-3265-4049-918c-749612e4d9d1.mov
+
+
+
 
 ## Installation 
 * Clone GitHub repository
