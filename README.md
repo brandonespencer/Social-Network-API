@@ -1,9 +1,9 @@
-# The best New Social Network 
+# The best Social Network
 
 An API for a new social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app will use Express, Node, MongoDB and Mongoose that will allow the user to be able to express thoughts use friend lists and thought reactions to be created also updated and deleted. 
 
 ## User Story
-As a social media startup, I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data
+As a social media startup, claiming to be the best I want an API for my social network that uses a NoSQL database so that my website can handle large amounts of unstructured data
 
 ## Walk through Video
 
