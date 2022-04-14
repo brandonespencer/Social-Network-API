@@ -93,21 +93,4 @@ const thoughtController = {
                 return res.status(404).json({ message: 'No thought with this ID!' });
             }
         res.json(updatedThought);
-        })
-        .catch(err => res.json(err));
-    },
-
-    //delete a thought by ID
-    deleteThought({ params, body}, res) {
-        Thought.findOneAndDelete({ _id: params.id })
-        .then(deletedThought => {
-            if (!deletedThought) {
-                return res.status(404).json({ message: 'No thought with this ID!'})
-            }
-            res.json(deletedThought);
-        })
-        .catch(err => res.json(err));
-    }
-};
-
-module.exports = thoughtController
+   
