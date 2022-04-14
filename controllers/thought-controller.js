@@ -45,7 +45,7 @@ const thoughtController = {
             })
             .then(dbUserData => {
                 if (!dbUserData) {
-                    res.status(404).json({ message: 'No user found with this username!'});
+                    res.status(404).json({ message: 'No user found'});
                     return;
                 }
                 res.json(dbUserData);
@@ -62,7 +62,7 @@ const thoughtController = {
         )
         .then(dbThoughtData => {
             if (!dbThoughtData) {
-                res.status(404).json({ message: 'No thought with this ID!' });
+                res.status(404).json({ message: 'No thought with the ID' });
                 return;
             }
             res.json(dbThoughtData)
@@ -90,7 +90,7 @@ const thoughtController = {
         )
         .then(updatedThought => {
             if (!updatedThought) {
-                return res.status(404).json({ message: 'No thought with this ID!' });
+                return res.status(404).json({ message: 'No thought with the ID' });
             }
         res.json(updatedThought);
    
