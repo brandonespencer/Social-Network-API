@@ -1,4 +1,4 @@
-# New Social Network 
+# The best New Social Network 
 
 An API for a new social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. The app will use Express, Node, MongoDB and Mongoose that will allow the user to be able to express thoughts use friend lists and thought reactions to be created also updated and deleted. 
 
