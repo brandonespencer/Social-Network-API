@@ -1,8 +1,8 @@
 {
-  "name": "social-network-api",
+  "name": "The-best-social-Network-api",
   "version": "1.0.0",
   "private": true,
-  "description": "Social Network API",
+  "description": "The-best-Social-Network API",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,9 +15,9 @@
   "author": "Brandon Spencer",
   "license": "MIT ",
   "bugs": {
-    "url": "https://github.com/brandonespencer/Social-Network-API/issues"
+    "url": "https://github.com/brandonespencer/The-best-Social-Network-API/issues"
   },
-  "homepage": "https://github.com/brandonespencer/Social-Network-API#readme",
+  "homepage": "https://github.com/brandonespencer/The-best-Social-Network-API#readme",
   "dependencies": {
     "express": "^4.17.1",
     "moment": "^2.28.0",
