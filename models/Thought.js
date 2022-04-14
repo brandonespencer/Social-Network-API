@@ -1,74 +1,67 @@
-const { Schema, model, Types } = require('mongoose');
-const moment = require('moment');
+const { Schema, model, Types } = require('mongoose')
+const { format_date } = require('../utils/formatter')
 
-const ReactionSchema = new Schema(
+const reactionSchema = new Schema(
     {
-      // set custom id to avoid confusion with parent comment _id
-      reactionId: {
-        type: Schema.Types.ObjectId,
-        default: () => new Types.ObjectId()
-      },
-      reactionBody: {
-        type: String,
-        required: true,
-        trim: true,
-        minlength: 1,
-        maxlength: 280
-      },
-      username: {
-        type: String,
-        required: true,
-      },
-      createdAt: {
-        type: Date,
-        default: Date.now,
-        get: createdAtVal => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
-      }
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId()
+        },
+        reactionBody: {
+            type: String,
+            required: true,
+            maxLength: 280
+        },
+        username: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (time) => format_date(time)
+        }
     },
     {
-      toJSON: {
-        getters: true
-      }
-        
+        toJSON: {
+            getters: true
+        },
+        id: false
     }
-  );
+)
 
-const ThoughtSchema = new Schema (
+const ThoughtSchema = new Schema(
     {
         thoughtText: {
             type: String,
             required: true,
             minlength: 1,
-            maxlength: 280
+            maxLength: 280
         },
         createdAt: {
             type: Date,
             default: Date.now,
-            get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
+            get: (time) => format_date(time) 
         },
         username: {
             type: String,
-            required: true,
-            ref: 'User'
+            required: true
         },
-        reactions: [ReactionSchema],
+        reactions: [reactionSchema]
     },
     {
-      toJSON: {
-        virtuals: true,
-        getters: true
-      },
-      id: false
-  }
+        toJSON: {
+            virtuals: true,
+            getters: true 
+        },
+        id: false
+    }
 )
 
-
-const Thought = model('Thought', ThoughtSchema);
-
-  // get total count of friends on retrieval
-  ThoughtSchema.virtual('reactionCount').get(function() {
+ThoughtSchema.virtual('reactionCount').get(function() {
     return this.reactions.length;
-  });
+});
 
+const Thought = model('Thought', ThoughtSchema)
 
-module.exports = Thought;
+module.exports = Thought
